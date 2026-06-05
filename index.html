@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brandname | Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3bda03ad81.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-row">
+        <div class="brand">
+          <div class="brand-icon">K</div>
+          <p>Brand<span>names</span></p>
+        </div>
+        <div class="top-mobile-actions">
+          <button class="icon-btn" aria-label="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <button class="icon-btn" aria-label="Gifts">
+            <i class="fa-solid fa-gift"></i>
+          </button>
+          <button class="icon-btn" aria-label="Cart">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+          </button>
+          <button class="icon-btn" aria-label="Wishlist">
+            <i class="fa-solid fa-circle-user"></i>
+          </button>
+        </div>
+        <div class="search-bar">
+          <button
+            class="category-toggle"
+            id="toggle-side-bar"
+            aria-label="Categories"
+          >
+            <i class="fa-solid fa-bars"></i>
+            Categories
+          </button>
+          <input
+            type="search"
+            placeholder="Search for anything"
+            aria-label="Search"
+          />
+          <button class="search-button" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
+        </div>
+        <nav class="top-actions">
+          <button class="icon-btn" aria-label="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <button class="icon-btn" aria-label="Gifts">
+            <i class="fa-solid fa-gift"></i>
+          </button>
+          <button class="icon-btn" aria-label="Cart">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+          </button>
+          <button class="icon-btn" aria-label="Wishlist">
+            <i class="fa-solid fa-circle-user"></i>
+          </button>
+        </nav>
+        <div class="side-bar">
+          <button class="close-btn" aria-label="Close categories">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="side-bar-list"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">New offers</p>
+          <h1>New rending<br />Interior decorations</h1>
+          <p class="hero-text">Hot summer discount ending soon</p>
+          <a href="#products" class="hero-cta">Order Deals Now</a>
+        </div>
+        <div class="hero-card hero-card-large">
+          <img
+            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1000&q=80"
+            alt="Interior decoration"
+          />
+        </div>
+        <div class="hero-card hero-card-side">
+          <img
+            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+            alt="Custom interior furniture"
+          />
+          <div class="side-copy">
+            <h2>Custom interiors</h2>
+            <span>Order Now</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="offer-bar">
+      <div class="container offer-list">
+        <span>Hot offers</span>
+        <span>Recommends</span>
+        <span>New arrivals</span>
+        <span>Bestsellers</span>
+        <span>Gift boxes</span>
+        <span>Article</span>
+        <span>More</span>
+      </div>
+    </section> -->
+
+    <main>
+      <section class="products-section" id="products">
+        <div class="container section-header">
+          <h2>Featured products</h2>
+          <p>Hand-picked furniture and accessories for your home.</p>
+        </div>
+        <div class="container product-grid" id="productGrid"></div>
+        <!-- Product Details Modal -->
+        <div class="product-modal" id="productModal">
+          <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+              <div class="modal-image">
+                <img id="modalImage" src="" alt="Product" />
+              </div>
+              <div class="modal-details">
+                <p class="modal-category" id="modalCategory"></p>
+                <h2 id="modalName"></h2>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-info">
+                  <h4>Product Information</h4>
+                  <ul>
+                    <li>
+                      <strong>Category:</strong>
+                      <span id="modalCategoryFull"></span>
+                    </li>
+                    <li><strong>Availability:</strong> In Stock</li>
+                    <li><strong>Shipping:</strong> Free worldwide shipping</li>
+                    <li><strong>Returns:</strong> 30-day return policy</li>
+                  </ul>
+                </div>
+                <div class="modal-price-section">
+                  <button class="modal-add-cart">Add to cart</button>
+                  <span class="modal-price" id="modalPrice"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Brandname</h3>
+          <p>
+            Elegant home decor and furniture with fast shipping and inspired
+            design.
+          </p>
+        </div>
+        <div>
+          <h4>COMPANY</h4>
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div>
+          <h4>SUPPORT</h4>
+          <a href="#">Help center</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+        </div>
+        <div class="contact-info">
+          <h4>CONTACT INFO</h4>
+          <address>
+            <li>123 Main Street <br />City, State 12345</li>
+          </address>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: info@brandname.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy;<span id="currentYear"></span> Brandname. All rights reserved.
+        </p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="back-top">
+            <i class="fas fa-chevron-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
